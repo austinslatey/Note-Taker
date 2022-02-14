@@ -30,6 +30,8 @@
   To help a small buisness create a note taker application for easy use.
 
 ## Screen-Shots
+![Application-image](./Develop/public/assets/screenshots%20&%20gifs/app-ss.png)
+![Terminal-image](Develop/public/assets/screenshots%20&%20gifs/term-ss.png)
     
 
   ## License 
