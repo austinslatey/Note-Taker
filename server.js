@@ -36,9 +36,9 @@ const readandWrite = () => {
             notesArr = [];
         }
         else {
-            notes = JSON.parse(data);
+            notesArr = JSON.parse(data);
             updateAndWrite = function () {
-                fs.writeFile(outputPath, JSON.stringify(notes), function (err) {
+                fs.writeFile(outputPath, JSON.stringify(notesArr), function (err) {
                     if (err) {
                         throw err;
                     }

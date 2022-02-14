@@ -6,14 +6,14 @@ let notesArr = [];
 ////Set route for returning the notes object
 router.get("/notes", (req, res) => {
 
-    res.json(notes);
+    res.json(notesArr);
 });
 
 //Delete note by ID
 router.delete("/notes/:id", (req, res) => {
     //Filter note by id to delete note from array
-    notesArr = notesArr.filter((object) => {
-        return object.id !== parseInt(req.params.id)
+    notesArr = notesArr.filter((obj) => {
+        return obj.id !== parseInt(req.params.id)
         
     });
     res.json(notesArr);
@@ -23,7 +23,7 @@ router.delete("/notes/:id", (req, res) => {
 //Route to return the notes object
 
 router.get("/notes/:id", (req, res) => {
-    res.json(notes.filter(note => note.id === parseInt(req.params.id)));
+    res.json(notesArr.filter(note => note.id === parseInt(req.params.id)));
     console.log(req.params.id);
 });
 
