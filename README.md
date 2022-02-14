@@ -17,6 +17,9 @@
 
   ---
 
+
+  ## Deployment
+  Visit the application at: [https://note-taker-211414.herokuapp.com/](https://note-taker-211414.herokuapp.com/)
   ## User-Story
   AS A small business owner, I WANT to be able to write and save notes, SO THAT I can organize my thoughts and keep track of tasks I need to complete.
 
