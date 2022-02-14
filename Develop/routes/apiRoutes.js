@@ -17,19 +17,17 @@ const readandWrite = () => {
             notesArr = [];
         }
         else {
-            //let oldNotesArr = JSON.parse(data);
-            
-                fs.writeFile(outputPath, JSON.stringify(notesArr), function (err) {
-                    if (err) {
-                        throw err;
-                    }
-                    console.log("Successfully wrote to file");
-                });
+            fs.writeFile(outputPath, JSON.stringify(notesArr), function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log("Successfully wrote to file");
+            });
         }
     });
 }
 
-////Set route for returning the notes object
+//Route to return notesArr object
 router.get("/notes", (req, res) => {
 
     res.json(notesArr);
@@ -37,10 +35,10 @@ router.get("/notes", (req, res) => {
 
 //Delete note by ID
 router.delete("/notes/:id", (req, res) => {
-    //Filter note by id to delete note from array
+    //Filter by id to delete from notes array
     notesArr = notesArr.filter((obj) => {
         return obj.id !== parseInt(req.params.id)
-        
+
     });
     res.json(notesArr);
     console.log("Note Deleted");
@@ -53,7 +51,7 @@ router.get("/notes/:id", (req, res) => {
     console.log(req.params.id);
 });
 
-// Post a new note to the server
+// post new notes
 router.post(`/notes`, (req, res) => {
     let nextNote = req.body;
     nextNote.id = notesArr.length + 1;

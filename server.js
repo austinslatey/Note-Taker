@@ -1,8 +1,9 @@
+//Import required modules
 const express = require('express');
-//Import Modules
 const path = require('path');
 const fs = require('fs');
 
+//Routes for apis
 const htmlRoutes = require('./Develop/routes/htmlRoutes');
 const apiRoutes = require('./Develop/routes/apiRoutes');
 
@@ -10,21 +11,19 @@ const apiRoutes = require('./Develop/routes/apiRoutes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-let notesArr = [];
-
-
-//Enable easy return of jsons (middleware)
+//Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'Develop/public')));
 
 //Telling the server to use routes
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.use(express.static(path.join(__dirname, 'Develop/public')));
 
 
-//Listen for the given port
+//Listen for port 3001
 app.listen(PORT, function () {
     console.log(`App listening on port ${PORT}`);
 });
