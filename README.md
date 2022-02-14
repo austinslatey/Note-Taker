@@ -3,6 +3,7 @@
 
   ##Table of Contents
 
+  * [Deployment](##deployment)
   * [User-Story](#user-story)
   * [Description](#description)
   * [Installation](#installation)
