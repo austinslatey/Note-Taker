@@ -7,8 +7,6 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributions](#contributions)
-  * [Tests](#tests)
   * [License](#license)
   * [Questions](#questions)
 
@@ -30,11 +28,6 @@
   ## Usage
   To help a small buisness create a note taker application for easy use.
 
-  ## Contributions
-  austin-slatey
-
-  ## Tests
-  n/a
 
   ## License 
   none
