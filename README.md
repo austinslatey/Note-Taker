@@ -7,6 +7,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Screen-Shots](#screen-shots)
   * [License](#license)
   * [Questions](#questions)
 
@@ -28,6 +29,8 @@
   ## Usage
   To help a small buisness create a note taker application for easy use.
 
+## Screen-Shots
+    
 
   ## License 
   none
