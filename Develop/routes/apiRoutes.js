@@ -21,7 +21,7 @@ const readandWrite = () => {
                 if (err) {
                     throw err;
                 }
-                console.log("Successfully wrote to file");
+                console.log("Success!");
             });
         }
     });
@@ -35,7 +35,7 @@ router.get("/notes", (req, res) => {
 
 //Delete note by ID
 router.delete("/notes/:id", (req, res) => {
-    //Filter by id to delete from notes array
+    //Filter id's to delete from NotesArr
     notesArr = notesArr.filter((obj) => {
         return obj.id !== parseInt(req.params.id)
 
@@ -48,7 +48,6 @@ router.delete("/notes/:id", (req, res) => {
 
 router.get("/notes/:id", (req, res) => {
     res.json(notesArr.filter(note => note.id === parseInt(req.params.id)));
-    console.log(req.params.id);
 });
 
 // post new notes
