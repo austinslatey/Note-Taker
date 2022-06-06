@@ -85,9 +85,15 @@ body {
   cursor: pointer;
 }
 
-#placeholder-color {
+#input-color {
   color: rgb(255,255,204);
+
 }
+
+input ::placeholder {
+  color:aliceblue
+}
+
 
 .start-page {
   background-color: rgb(153,102,153);
